@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+      <a routerLink="/" class="brand-logo">
+        <img src="assets/logo.gif" alt="Brand Logo" class="brand-logo-img">
+      </a>
+      <button class="navbar-toggler" (click)="toggleMenu()">
+        ☰
+      </button>
+    </div>
+    <div class="navbar-links" [class.active]="menuActive">
+      <ul>
+        <li><a routerLink="" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active">Project</a></li>
+        <li><a routerLink="/education" routerLinkActive="active">Education</a></li>
+        
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>

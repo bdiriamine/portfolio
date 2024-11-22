@@ -1,0 +1,136 @@
+/* General Container Styling */
+.container-fluid {
+    padding: 20px;
+    background-image: url('/assets/slider-left-dec.png'); /* Replace with the correct path to your image */
+    background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+    background-position: left top; /* Positions the image at the top-left corner */
+    background-size: contain; /* Scales the image to fit its container */
+    background-color: #f9f9f9; /* Optional: Adds a fallback color */
+    animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  .profile-container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Profile Image */
+  .profile-image img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    animation: bounceIn 2s ease-in-out; /* Add bounce-in animation */
+}
+
+/* Keyframe Animation for Bounce In */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+  
+  /* Social Links Row */
+  .social-row {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(30, 30, 47, 0.8); /* Transparent background */
+    animation: slideInFromBottom 1.5s ease-in-out; /* Slide-in animation */
+}
+
+/* Keyframe Animation for Slide In */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+  
+  .social-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #f9f9f9;
+    text-transform: uppercase;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-link img {
+    border-radius: 9%;
+    width: 96px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.social-link img:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 0.6s infinite; /* Add a subtle pulse effect */
+}
+
+/* Keyframe Animation for Pulse */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    50% {
+        transform: scale(1.3) rotate(10deg);
+    }
+}
+  
+  /* Profile Card */
+  .profile-card h1, h2 {
+    color: #333;
+    text-align: left;
+  }
+  
+  .namebg {
+    background: #007bff;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+  .profcontact{    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;}
+@media (max-width: 768px) {
+    .social-link img {
+                border-radius: 9%;
+                width: 45px;
+                height: 40px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+        }

@@ -1,0 +1,20 @@
+<section class="projects-section">
+    <h2 class="text-center fw-bold mb-4">Projects</h2>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4" *ngFor="let project of projects">
+          <div class="project-card">
+            <img [src]="project.imageUrl" [alt]="project.name" class="project-image img-fluid" />
+            <div class="project-content">
+              <h3 class="project-name">{{ project.name }}</h3>
+              <p class="project-description">{{ project.description }}</p>
+              <ul class="technologies-list">
+                <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,73 @@
+.projects-section {
+    padding: 50px 0;
+    background: url('/assets/client-bg.png') no-repeat center center/cover, 
+                linear-gradient(135deg, #f3f4f6, #e2e8f0);
+  }
+  
+  .projects-section h2 {
+    color: #1a202c;
+    font-size: 2rem;
+  }
+  
+  .project-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    width: 120px; /* Set width to a smaller size */
+    height: 120px; /* Set height to match the width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-name {
+    font-size: 1.5rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+  }
+  
+  .technologies-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .technologies-list li {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+  }
+  
+  .technologies-list li:hover {
+    background-color: #2c5282;
+  }
+  
+  

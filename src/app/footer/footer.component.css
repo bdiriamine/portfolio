@@ -1,0 +1,24 @@
+.footer {
+    background-color: #527aec; /* Dark background */
+    color: #fff;           /* White text */
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    position: fixed;       /* Sticks to the bottom */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Adjust footer for mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  }

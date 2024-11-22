@@ -1,0 +1,152 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: rgb(82 122 236);
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 10;
+  }
+ 
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-logo {
+    color: #ff6347; /* A beautiful tomato color */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .brand-logo:hover {
+    color: #ffa07a; /* Light coral */
+  }
+  
+  .navbar-toggler {
+    display:none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotate the icon on hover */
+  }
+  
+  .navbar-links {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 15px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: #30cefa;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .navbar-links a:hover {
+    color: #30cefa;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navbar-toggler {
+      display: block; /* Show the toggle button */
+    }
+    .navbar-toggler {
+       float:left;
+        display:block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+    .navbar-links {
+      display: none; /* Hide links initially */
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background-color: #1e1e2f;
+      padding: 20px 0;
+      border-top: 1px solid #444;
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Show links when active */
+      animation: slideDown 0.5s ease forwards;
+    }
+  
+    .navbar-links ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links li {
+      margin: 15px 0;
+    }
+  }
+  
+  /* Animation for Slide Down */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .brand-logo-img {
+    height: 80px; /* Adjust the size */
+    width: auto;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand-logo-img:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+  }

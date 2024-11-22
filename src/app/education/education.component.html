@@ -1,0 +1,30 @@
+<div class="page-container">
+    <!-- Left Section: Information -->
+    <div class="info-section" @fadeInOut>
+      <h1 class="text-center">Education </h1>
+      <div class="train-timeline-container">
+        <div class="train-track"></div>
+        <div class="train-stations">
+          <div 
+            class="station" 
+            *ngFor="let station of stations; let i = index"
+            [class.active]="isActive(i)"
+          >
+            <div class="station-circle">
+              <span class="station-number">{{ i + 1 }}</span>
+            </div>
+            <div class="station-info">
+              <h3>{{ station.title }}</h3>
+              <p>{{ station.institution }}</p>
+              <span>{{ station.duration }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Section: Image -->
+    <div class="image-section" @fadeInOut>
+      <img src="assets/education.gif" alt="Education Animation" class="education-image" />
+    </div>
+  </div>
