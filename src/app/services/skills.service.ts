@@ -40,6 +40,6 @@ export class SkillsService {
 
   ];
   getSkills(): Observable<Skill[]> {
-    return of(this.skills); // Return skills as an observable
+    return of(this.skills);
   }
 }

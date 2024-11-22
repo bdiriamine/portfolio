@@ -1,4 +1,4 @@
-/* General Styling */
+
 .carousel-inner {
     background-color: #f9f9f9;
     padding: 20px;
@@ -15,7 +15,7 @@
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
-  /* Keyframes for Animations */
+ 
   @keyframes fadeIn {
     from {
       opacity: 0;

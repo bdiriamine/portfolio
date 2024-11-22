@@ -31,7 +31,7 @@ export class EducationComponent implements OnInit {
     }
   ];
 
-  activeIndex = -1; // Active station index
+  activeIndex = -1;
 
   ngOnInit(): void {
     this.animateStations();
@@ -41,7 +41,7 @@ export class EducationComponent implements OnInit {
     this.stations.forEach((_, index) => {
       setTimeout(() => {
         this.activeIndex = index;
-      }, index * 1500); // Animates each station every 1.5 seconds
+      }, index * 1500);
     });
   }
 

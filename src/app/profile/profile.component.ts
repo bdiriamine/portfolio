@@ -12,6 +12,8 @@ export class ProfileComponent {
   bio: string = 'Ingénieur Génie logiciel & developpeur Full Stack JS';
   linkedinUrl: string = 'https://www.linkedin.com/in/johndoe';
   githubUrl: string = 'https://github.com/johndoe';
-  cvUrl: string = '/assets/cv-BDIRIMohamedAminefullstack js.pdf';
+  cvUrl: string = '/assets/resume MohamedAmineBdiriAnglais.pdf';
+  cvUrlfr: string = '/assets/cv-BDIRIMohamedAminefullstack jsfrançais.pdf';
+
   email: string = 'bdiri.mohamedamine@gmail.com'
 }
