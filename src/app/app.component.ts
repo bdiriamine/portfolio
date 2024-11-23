@@ -5,11 +5,10 @@ import { PortfolioSliderComponent } from "./portfolio-slider/portfolio-slider.co
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, PortfolioSliderComponent, ProfileComponent, FooterComponent],
+  imports: [RouterOutlet, NavbarComponent, PortfolioSliderComponent, ProfileComponent, FooterComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

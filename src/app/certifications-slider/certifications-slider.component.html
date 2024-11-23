@@ -1,0 +1,64 @@
+<h4 class="text-center text-primary mt-5 mb-5">
+    Document of Internships, Work Certificates, and Diplomas
+  </h4>
+  <div id="certificationCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        *ngFor="let slide of groupedCertifications; let i = index"
+        data-bs-target="#certificationCarousel"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        aria-current="i === 0 ? 'true' : 'false'"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+      ></button>
+    </div>
+  
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div
+        *ngFor="let slide of groupedCertifications; let i = index"
+        class="carousel-item"
+        [class.active]="i === 0"
+      >
+        <div class="row justify-content-center gx-4 gy-4">
+          <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let certification of slide">
+            <div class="card card-hover border-0 shadow">
+              <img
+                [src]="certification.src"
+                [alt]="certification.alt"
+                class="slide-image img-fluid rounded-top"
+                loading="lazy"
+              />
+              <div class="card-body text-center bg-light">
+                <h5 class="card-title text-dark fw-bold">{{ certification.title }}</h5>
+                <p class="card-text text-secondary">{{ certification.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Controls -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#certificationCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#certificationCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
