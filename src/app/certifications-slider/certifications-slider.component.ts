@@ -11,17 +11,17 @@ import { CommonModule } from '@angular/common';
 })
 export class CertificationsSliderComponent implements OnInit {
   certifications = [
-    { src: 'assets/paper/certificatmern.png', alt: "Software Developer Bootcamp", title: "Software Developer Bootcamp MERN Certificate", description: "2024" },
-    { src: 'assets/paper/Diplome  National  d\'Ingenieur.png', alt: "National Engineering Diploma", title: "National Engineering Diploma", description: "2019" },
-    { src: 'assets/paper/EPI- Prix d\'excellence PFE.png', alt: "EPI- Prix d'excellence PFE", title: "EPI - Excellence Award for Final Year Project", description: "2019" },
-    { src: 'assets/paper/diplome en electronique électrotechnique et automatisme.png', alt: "Diploma in Electronics, Electrotechnics, and Automation", title: "Diploma in Electronics, Electrotechnics, and Automation", description: "2015" },
-    { src: 'assets/paper/diplome baccalauréat.png', alt: "High School Diploma", title: "Bachelor's degree", description: "2012" },
-    { src: 'assets/paper/attestation de travail Skillware.png', alt: "Work Certificate from Skillware", title: "Work Certificate from Skillware", description: "" },
-    { src: 'assets/paper/attestation  de Stage EPI.png', alt: "Internship Certificate from EPI", title: "Internship Certificate from EPI", description: "" },
-    { src: "assets/paper/attestation de Stage Peek Square.png", alt: "Internship Certificate from Peek Square", title: "Internship Certificate from Peek Square", description: "" },
-    { src: 'assets/paper/attestation de Stage FITELEC.png', alt: "Internship Certificate from FITELEC", title: "Internship Certificate from FITELEC", description: "" },
-    { src: 'assets/paper/attestation de stage TUNISIE TELECOM.png', alt: "Internship Certificate from TUNISIE TELECOM", title: "Internship Certificate from TUNISIE TELECOM", description: "" },
-    { src: 'assets/paper/attestation de Stage STEG.png', alt: "Internship Certificate from STEG", title: "Internship Certificate from STEG", description: "" },
+    { src: 'assets/paper/certificatmern.webp', alt: "Software Developer Bootcamp", title: "Software Developer Bootcamp MERN Certificate", description: "2024" },
+    { src: 'assets/paper/Diplome  National  d\'Ingenieur.webp', alt: "National Engineering Diploma", title: "National Engineering Diploma", description: "2019" },
+    { src: 'assets/paper/EPI- Prix d\'excellence PFE.webp', alt: "EPI- Prix d'excellence PFE", title: "EPI - Excellence Award for Final Year Project", description: "2019" },
+    { src: 'assets/paper/diplome en electronique électrotechnique et automatisme.webp', alt: "Diploma in Electronics, Electrotechnics, and Automation", title: "Diploma in Electronics, Electrotechnics, and Automation", description: "2015" },
+    { src: 'assets/paper/diplome baccalauréat.webp', alt: "High School Diploma", title: "Bachelor's degree", description: "2012" },
+    { src: 'assets/paper/attestation de travail Skillware.webp', alt: "Work Certificate from Skillware", title: "Work Certificate from Skillware", description: "" },
+    { src: 'assets/paper/attestation  de Stage EPI.webp', alt: "Internship Certificate from EPI", title: "Internship Certificate from EPI", description: "" },
+    { src: "assets/paper/attestation de Stage Peek Square.webp", alt: "Internship Certificate from Peek Square", title: "Internship Certificate from Peek Square", description: "" },
+    { src: 'assets/paper/attestation de Stage FITELEC.webp', alt: "Internship Certificate from FITELEC", title: "Internship Certificate from FITELEC", description: "" },
+    { src: 'assets/paper/attestation de stage TUNISIE TELECOM.webp', alt: "Internship Certificate from TUNISIE TELECOM", title: "Internship Certificate from TUNISIE TELECOM", description: "" },
+    { src: 'assets/paper/attestation de Stage STEG.webp', alt: "Internship Certificate from STEG", title: "Internship Certificate from STEG", description: "" },
   ]
     ;
 
@@ -29,6 +29,12 @@ export class CertificationsSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.groupedCertifications = this.groupArray(this.certifications, 3);
+  }
+  handleImageLoad(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    const loader = img.previousElementSibling as HTMLElement; // Reference the spinner loader
+    loader.style.display = 'none'; // Hide the loader
+    img.classList.remove('d-none'); // Show the image
   }
 
   // Groups array into chunks of specified size
