@@ -1,62 +1,49 @@
-
-.card img {
-    border-radius: 50%;
-    background-color: #f8f9fa;
-    padding: 10px;
-  }
-  .card h5 {
-    font-size: 1rem;
-    color: black;
+/* Ensures the images are smaller and centered */
+.skill-img {
+    width: 70%; /* Adjust the size as needed */
+    object-fit: contain; /* Ensure the images don't get distorted */
+    animation: fadeIn 1s ease-in-out; /* Animation to fade in images */
   }
   
-  section.skills-section {
-    background-image: url('/assets/bgpor.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-  }
-  .skills-section {
-    background-image: url('/assets/bgskills.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-  }
-  
-  .skill-card {
-    position: relative;
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .skill-card:hover {
-    border-color: #4CAF50; /* Green border on hover */
-    transform: translateY(-5px); /* Slight lift on hover */
-  }
-  
-  .skill-card img {
-    transition: transform 0.3s ease;
-  }
-  
-  .skill-card:hover img {
-    transform: scale(1.1); /* Slight zoom effect on image */
-  }
-  
-  /* Animate the border color change */
-  @keyframes borderAnimation {
+  /* Optional: Adding a smooth fade-in animation to the images */
+  @keyframes fadeIn {
     0% {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #4CAF50; /* Green color halfway through the animation */
+      opacity: 0;
     }
     100% {
-      border-color: transparent;
+      opacity: 1;
     }
   }
   
-  .skill-card {
-    animation: borderAnimation 5s infinite; /* Apply animation with a delay */
+  /* Optional: Adding a bounce effect for carousel control buttons */
+  .carousel-control-prev, .carousel-control-next {
+    animation: bounce 1s infinite;
   }
   
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .carousel-inner {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 1rem; /* Space between images */
+    overflow: hidden; /* Hide overflow for neat sliding effect */
+  }
+  
+  .carousel-item {
+    display: block;
+  }
+  
+  .skill-img {
+    width: 100%; /* Ensure images fill the column width */
+    height: auto; /* Maintain aspect ratio */
+  }

@@ -11,7 +11,9 @@ import { CommonModule } from '@angular/common';
 })
 export class SkillsComponent implements OnInit {
   skills: Skill[] = [];
-
+  frontEndFrameworks = ['React', 'Angular', 'Vue.js'];
+  backendTechnologies = ['Node.js', 'Express.js', 'Django'];
+  databases = ['MongoDB', 'MySQL', 'PostgreSQL'];
   constructor(private skillsService: SkillsService) { }
 
   ngOnInit(): void {
